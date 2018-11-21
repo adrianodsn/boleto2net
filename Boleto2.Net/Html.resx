@@ -163,7 +163,7 @@
     <value>&lt;table class="w666"&gt;
 				&lt;tr class="ct h13"&gt;
 						&lt;td class="w298"&gt;Pagador&lt;/td&gt;
-						&lt;td class="w126"&gt;Carteira / Nosso Número&lt;/td&gt;
+						&lt;td class="w126"&gt;Nosso Número&lt;/td&gt;
 						&lt;td class="w106"&gt;Espécie&lt;/td&gt;
 						&lt;td class="w106"&gt;Valor do Documento&lt;/td&gt;
 				&lt;/tr&gt;
@@ -408,7 +408,7 @@
 						&lt;td class="w62"&gt;Espécie doc.&lt;/td&gt;
 						&lt;td class="w34"&gt;Aceite&lt;/td&gt;
 						&lt;td class="w72"&gt;Data processamento&lt;/td&gt;
-						&lt;td class="w180"&gt;Carteira / Nosso número&lt;/td&gt;
+						&lt;td class="w180"&gt;Nosso número&lt;/td&gt;
 				&lt;/tr&gt;
 				&lt;tr class="cp h12 rBb"&gt;
 						&lt;td&gt;@DATADOCUMENTO&lt;/td&gt;
@@ -518,7 +518,7 @@
 						&lt;td class="w126"&gt;Agência / Código do Beneficiário&lt;/td&gt;
 						&lt;td class="w34"&gt;Espécie&lt;/td&gt;
 						&lt;td class="w45"&gt;Quantidade&lt;/td&gt;
-						&lt;td class="w128"&gt;Carteira / Nosso número&lt;/td&gt;
+						&lt;td class="w128"&gt;Nosso número&lt;/td&gt;
 				&lt;/tr&gt;
 				&lt;tr class="cp h12 At rBb"&gt;
 						&lt;td&gt;@CEDENTE&lt;/td&gt;
