@@ -381,8 +381,11 @@ namespace Boleto2Net
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0002, 002, 0, boleto.Banco.Cedente.TipoCPFCNPJ("00"), '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0004, 014, 0, boleto.Banco.Cedente.CPFCNPJ, '0');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0018, 004, 0, boleto.Banco.Cedente.ContaBancaria.Agencia, ' ');
-                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0022, 008, 0, boleto.Banco.Cedente.ContaBancaria.Conta, ' ');
-                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0030, 001, 0, boleto.Banco.Cedente.ContaBancaria.DigitoConta, ' ');
+                //reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0022, 008, 0, boleto.Banco.Cedente.ContaBancaria.Conta, ' ');
+                //reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0030, 001, 0, boleto.Banco.Cedente.ContaBancaria.DigitoConta, ' ');
+                //Ajuste
+                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0022, 007, 0, boleto.Banco.Cedente.Codigo, ' ');
+                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0029, 002, 0, boleto.Banco.Cedente.CodigoDV, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0031, 007, 0, string.Empty, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0038, 025, 0, boleto.NumeroControleParticipante, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0063, 010, 0, boleto.NossoNumero + boleto.NossoNumeroDV, ' ');
