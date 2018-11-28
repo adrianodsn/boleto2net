@@ -35,7 +35,7 @@ img {
 }
 
 .ct {
-    font: 9px "arial narrow";
+    font: 8px arial;
     color: #000000;
 }
 
@@ -91,7 +91,7 @@ img {
 }
 
 .ctN {
-    font: 9px "arial narrow";
+    font: 8px arial;
     color: #000000;
 }
 
@@ -296,7 +296,7 @@ img {
 }
 
 .w450 {
-    width: 409px;
+    /*width: 450px;*/
 }
 
 .w472 {
@@ -356,7 +356,7 @@ img {
 }
 
 .rc6 .t {
-	font: 9px "arial narrow";
+	font: 8px arial;
 	color: #000033;
 	height: 13px;
 }

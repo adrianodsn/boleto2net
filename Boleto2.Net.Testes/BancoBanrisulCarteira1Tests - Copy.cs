@@ -11,17 +11,17 @@ namespace Boleto2Net.Testes
         {
             var contaBancaria = new ContaBancaria
             {
-                Agencia = "0758",
+                Agencia = "0340",
                 DigitoAgencia = "",
-                Conta = "200162510",
-                DigitoConta = "6",
+                Conta = "12345606",
+                DigitoConta = "",
                 CarteiraPadrao = "1",
                 VariacaoCarteiraPadrao = "",
                 TipoCarteiraPadrao = TipoCarteira.CarteiraCobrancaSimples,
                 TipoFormaCadastramento = TipoFormaCadastramento.ComRegistro
             };
             _banco = Banco.Instancia(Bancos.Banrisul);
-            _banco.Cedente = Utils.GerarCedente("0162510", "62", "", contaBancaria);
+            _banco.Cedente = Utils.GerarCedente("0340123456063", "", "", contaBancaria);
             _banco.FormataCedente();
         }
 
@@ -35,7 +35,7 @@ namespace Boleto2Net.Testes
         public void Banrisul_1_REM400_EmpresaEmite()
         {
             _banco.Cedente.ContaBancaria.TipoImpressaoBoleto = TipoImpressaoBoleto.Empresa;
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBanrisulCarteira1Tests) + "_EmpresaEmite", 10, true, "?", 12345);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBanrisulCarteira1Tests) + "_EmpresaEmite", 5, true, "?", 12345);
         }
 
         [TestCase(276.15, "458", "BB874A", "1", "00000458-02", "04191693400000276152103401234560000004584090", "04192.10349 01234.560009 00045.840907 1 69340000027615", 2016, 10, 1)]

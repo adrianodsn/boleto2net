@@ -16,19 +16,19 @@ namespace Boleto2Net.Testes
         {
             return new Cedente
             {
-                CPFCNPJ = "86.875.666/0001-09",
-                Nome = "Cedente Teste",
+                CPFCNPJ = "02.020.925/0001-20",
+                Nome = "Medics Assessoria e Medicina do Trabalho Ltda",
                 Codigo = codigoCedente,
                 CodigoDV = digitoCodigoCedente,
                 Endereco = new Endereco
                 {
-                    LogradouroEndereco = "Rua Teste do Cedente",
-                    LogradouroNumero = "789",
-                    LogradouroComplemento = "Cj 333",
-                    Bairro = "Bairro",
-                    Cidade = "Cidade",
-                    UF = "SP",
-                    CEP = "65432987"
+                    LogradouroEndereco = "Rua Barão do Rio Branco",
+                    LogradouroNumero = "1018",
+                    LogradouroComplemento = "Sala 09",
+                    Bairro = "Centro",
+                    Cidade = "Panambi",
+                    UF = "RS",
+                    CEP = "98280000"
                 },
                 ContaBancaria = contaBancaria
             };
@@ -96,8 +96,8 @@ namespace Boleto2Net.Testes
                 NumeroDocumento = "BB" + _proximoNossoNumero.ToString("D6") + (char)(64 + i),
                 EspecieDocumento = TipoEspecieDocumento.DM,
                 Aceite = aceite,
-                CodigoInstrucao1 = "11",
-                CodigoInstrucao2 = "22",
+                CodigoInstrucao1 = "18",
+                CodigoInstrucao2 = "23",
                 DataDesconto = DateTime.Now.AddMonths(i),
                 ValorDesconto = (decimal)(100 * i * 0.10),
                 DataMulta = DateTime.Now.AddMonths(i),
@@ -124,20 +124,20 @@ namespace Boleto2Net.Testes
                 boleto.Avalista = GerarSacado();
                 boleto.Avalista.Nome = boleto.Avalista.Nome.Replace("Sacado", "Avalista");
             }
-            // Grupo Demonstrativo do Boleto
-            var grupoDemonstrativo = new GrupoDemonstrativo { Descricao = "GRUPO 1" };
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 1, Item 1", Referencia = boleto.DataEmissao.AddMonths(-1).Month + "/" + boleto.DataEmissao.AddMonths(-1).Year, Valor = boleto.ValorTitulo * (decimal)0.15 });
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 1, Item 2", Referencia = boleto.DataEmissao.AddMonths(-1).Month + "/" + boleto.DataEmissao.AddMonths(-1).Year, Valor = boleto.ValorTitulo * (decimal)0.05 });
-            boleto.Demonstrativos.Add(grupoDemonstrativo);
-            grupoDemonstrativo = new GrupoDemonstrativo { Descricao = "GRUPO 2" };
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 2, Item 1", Referencia = boleto.DataEmissao.Month + "/" + boleto.DataEmissao.Year, Valor = boleto.ValorTitulo * (decimal)0.20 });
-            boleto.Demonstrativos.Add(grupoDemonstrativo);
-            grupoDemonstrativo = new GrupoDemonstrativo { Descricao = "GRUPO 3" };
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 1", Referencia = boleto.DataEmissao.AddMonths(-1).Month + "/" + boleto.DataEmissao.AddMonths(-1).Year, Valor = boleto.ValorTitulo * (decimal)0.37 });
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 2", Referencia = boleto.DataEmissao.Month + "/" + boleto.DataEmissao.Year, Valor = boleto.ValorTitulo * (decimal)0.03 });
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 3", Referencia = boleto.DataEmissao.Month + "/" + boleto.DataEmissao.Year, Valor = boleto.ValorTitulo * (decimal)0.12 });
-            grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 4", Referencia = boleto.DataEmissao.AddMonths(+1).Month + "/" + boleto.DataEmissao.AddMonths(+1).Year, Valor = boleto.ValorTitulo * (decimal)0.08 });
-            boleto.Demonstrativos.Add(grupoDemonstrativo);
+            //// Grupo Demonstrativo do Boleto
+            //var grupoDemonstrativo = new GrupoDemonstrativo { Descricao = "GRUPO 1" };
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 1, Item 1", Referencia = boleto.DataEmissao.AddMonths(-1).Month + "/" + boleto.DataEmissao.AddMonths(-1).Year, Valor = boleto.ValorTitulo * (decimal)0.15 });
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 1, Item 2", Referencia = boleto.DataEmissao.AddMonths(-1).Month + "/" + boleto.DataEmissao.AddMonths(-1).Year, Valor = boleto.ValorTitulo * (decimal)0.05 });
+            //boleto.Demonstrativos.Add(grupoDemonstrativo);
+            //grupoDemonstrativo = new GrupoDemonstrativo { Descricao = "GRUPO 2" };
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 2, Item 1", Referencia = boleto.DataEmissao.Month + "/" + boleto.DataEmissao.Year, Valor = boleto.ValorTitulo * (decimal)0.20 });
+            //boleto.Demonstrativos.Add(grupoDemonstrativo);
+            //grupoDemonstrativo = new GrupoDemonstrativo { Descricao = "GRUPO 3" };
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 1", Referencia = boleto.DataEmissao.AddMonths(-1).Month + "/" + boleto.DataEmissao.AddMonths(-1).Year, Valor = boleto.ValorTitulo * (decimal)0.37 });
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 2", Referencia = boleto.DataEmissao.Month + "/" + boleto.DataEmissao.Year, Valor = boleto.ValorTitulo * (decimal)0.03 });
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 3", Referencia = boleto.DataEmissao.Month + "/" + boleto.DataEmissao.Year, Valor = boleto.ValorTitulo * (decimal)0.12 });
+            //grupoDemonstrativo.Itens.Add(new ItemDemonstrativo { Descricao = "Grupo 3, Item 4", Referencia = boleto.DataEmissao.AddMonths(+1).Month + "/" + boleto.DataEmissao.AddMonths(+1).Year, Valor = boleto.ValorTitulo * (decimal)0.08 });
+            //boleto.Demonstrativos.Add(grupoDemonstrativo);
 
             boleto.ValidarDados();
             _contador++;
