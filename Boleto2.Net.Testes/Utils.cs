@@ -22,9 +22,8 @@ namespace Boleto2Net.Testes
                 CodigoDV = digitoCodigoCedente,
                 Endereco = new Endereco
                 {
-                    LogradouroEndereco = "Rua Barão do Rio Branco",
-                    LogradouroNumero = "1018",
-                    LogradouroComplemento = "Sala 09",
+                    LogradouroEndereco = "Rua Hermann Mayer",
+                    LogradouroNumero = "339",
                     Bairro = "Centro",
                     Cidade = "Panambi",
                     UF = "RS",
